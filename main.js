@@ -22,6 +22,11 @@ recognition.addEventListener("result", e => {
     p = document.createElement("p");
     words.appendChild(p);
   }
+
+  if (transcript.includes("unicorn")) {
+    var body = document.querySelector("body");
+    body.style.background = "green";
+  }
 });
 
 // this will fix when result ends
