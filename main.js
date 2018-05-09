@@ -19,4 +19,7 @@ recognition.addEventListener("result", e => {
   // the speech recognition unbinds when I stop speaking
 });
 
+// this will fix when result ends
+recognition.addEventListener("end", recognition.start);
+
 recognition.start();
