@@ -16,6 +16,7 @@ recognition.addEventListener("result", e => {
     .join("");
 
   console.log(transcript);
+  // the speech recognition unbinds when I stop speaking
 });
 
 recognition.start();
