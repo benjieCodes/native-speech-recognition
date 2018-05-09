@@ -10,7 +10,9 @@ const words = document.querySelector(".words");
 words.appendChild(p);
 
 recognition.addEventListener("result", e => {
-  console.log(e);
+  const transcript = Array.from(e.results);
+
+  console.log(transcript);
 });
 
 recognition.start();
