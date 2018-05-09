@@ -18,6 +18,10 @@ recognition.addEventListener("result", e => {
   p.textContent = transcript;
   console.log(transcript);
   // the speech recognition unbinds when I stop speaking
+  if (e.results[0].isFinal) {
+    p = document.createElement("p");
+    words.appendChild(p);
+  }
 });
 
 // this will fix when result ends
